@@ -46,6 +46,10 @@ Example:
 // internal/tools/mytool.go
 type MyTool struct{}
 
+func init() {
+	Register("my-tool", NewMyTool)
+}
+
 func NewMyTool() *MyTool {
     return &MyTool{}
 }
