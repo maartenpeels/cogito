@@ -95,22 +95,21 @@ go build -o cogito cmd/server/main.go
 
 ### GitHub Copilot (VS Code)
 
-1. **Install MCP Extension**: Install one of these VS Code extensions:
-   - `automatalabs.copilot-mcp` - Copilot MCP Integration
-
-2. **Build the Server**:
+1. **Build the Server**:
    ```bash
    go build -o cogito cmd/server/main.go
    ```
 
-3. **Configure MCP Client**: Add this to your VS Code settings or MCP client config:
+2. **Configure MCP Client**: Add this to your VS Code settings or MCP client config:
    ```json
    {
-     "mcpServers": {
-       "cogito": {
-         "command": "/path/to/your/cogito",
-         "args": [],
-         "env": {}
+     "mcp": {
+       "servers": {
+         "cogito": {
+           "command": "/path/to/your/cogito",
+           "args": [],
+           "env": {}
+         }
        }
      }
    }
